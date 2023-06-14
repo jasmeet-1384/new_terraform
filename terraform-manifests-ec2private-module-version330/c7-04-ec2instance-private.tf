@@ -33,7 +33,7 @@ module "ec2_private" {
    for_each = toset(["0", "1"])
   # insert the 10 required variables here
   name                   = "${var.environment}-vm-${each.key}"
-  ami                    = data.aws_ami.amzlinux2.id
+  ami                    = data.aws_ami.amz-linux2
   instance_type          = var.instance_type
   key_name               = var.instance_keypair
   #monitoring             = true
