@@ -26,7 +26,7 @@ module "alb" {
 #target_Group
 target_groups = [
     {
-      name_prefix      = "pref-"
+      name_prefix      = "pref-jass"
       backend_protocol = "HTTP"
       backend_port     = 80
       target_type      = "instance"
@@ -58,4 +58,5 @@ target_groups = [
     }
   ]
   tags = local.common_tags
+
 }
