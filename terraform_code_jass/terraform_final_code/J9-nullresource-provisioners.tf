@@ -21,6 +21,8 @@ resource "null_resource" "name" {
       "sudo chmod 400 /tmp/testjasmeet.pem"
     ]
   }
+
+  /*
 ## Local Exec Provisioner:  local-exec provisioner (Creation-Time Provisioner - Triggered during Create Resource)
   provisioner "local-exec" {
     command = "echo VPC created on `date` and VPC ID: ${module.vpc.vpc_id} >> creation-time-vpc-id.txt"
