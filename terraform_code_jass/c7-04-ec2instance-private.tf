@@ -28,7 +28,7 @@ module "ec2_private" {
 module "ec2_private" {
   depends_on = [ module.vpc ] # VERY VERY IMPORTANT else userdata webserver provisioning will fail
   source  = "terraform-aws-modules/ec2-instance/aws"
-  version = "3.3.0"
+  version = "5.1.0"
    #for_each = toset([ module.vpc.private_subnets[0],module.vpc.private_subnets[1] ])
    for_each = toset(["0", "1"])
   # insert the 10 required variables here
@@ -37,7 +37,7 @@ module "ec2_private" {
   instance_type          = var.instance_type
   key_name               = var.instance_keypair
   #monitoring             = true
-  vpc_security_group_ids = [module.private_sg.this_security_group_id]
+  vpc_security_group_ids = [module.private_sg.security_group_id]
   
   subnet_id =  element(module.vpc.private_subnets, tonumber(each.key))
 #   instance_count         = var.private_instance_count

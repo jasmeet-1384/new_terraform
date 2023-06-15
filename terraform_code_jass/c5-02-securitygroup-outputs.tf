@@ -35,6 +35,6 @@ output "private_sg_group_vpc_id" {
 ## private_sg_group_name
 output "private_sg_group_name" {
   description = "The name of the security group"
-  value       = module.private_sg.this_security_group_name
+  value       = module.private_sg.security_group_name
 }
 
