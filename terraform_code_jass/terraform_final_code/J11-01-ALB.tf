@@ -26,7 +26,7 @@ module "alb" {
   #target_Group
   target_groups = [
     {
-      name_prefix      = "pref-jass"
+      name_prefix      = "pref-"
       backend_protocol = "HTTP"
       backend_port     = 80
       target_type      = "instance"
