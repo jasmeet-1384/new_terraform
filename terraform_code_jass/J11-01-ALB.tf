@@ -19,12 +19,12 @@ module "alb" {
     {
       port               = 80
       protocol           = "HTTP"
-      target_group_index = 0 
+      target_group_index = 0
     }
-  ]  
+  ]
 
-#target_Group
-target_groups = [
+  #target_Group
+  target_groups = [
     {
       name_prefix      = "pref-jass"
       backend_protocol = "HTTP"
@@ -47,14 +47,14 @@ target_groups = [
       targets = {
         my_app1_jass = {
           target_id = module.ec2_private[0].id
-          port = 80
+          port      = 80
         }
         my_app1_jass2 = {
           target_id = module.ec2_private[1].id
-          port = 8080
+          port      = 8080
         }
       }
-       tags =local.common_tags
+      tags = local.common_tags
     }
   ]
   tags = local.common_tags
