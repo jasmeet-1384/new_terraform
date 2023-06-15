@@ -50,7 +50,7 @@ target_groups = [
           port = 80
         }
         my_app1_jass2 = {
-          target_id = moduel.ec2_private[1].id
+          target_id = module.ec2_private[1].id
           port = 8080
         }
       }
