@@ -89,11 +89,11 @@ deregistration_delay = 10
       # App2 Target Group - Targets
       targets = {
         my_app2_jass1 = {
-          target_id = module.ec2_private_app2.id[0]
+          target_id = module.ec2_private_app2[0].id
           port      = 80
         },
         my_app2_jass2 = {
-          target_id = module.ec2_private_app2.id[1]
+          target_id = module.ec2_private_app2[1].id
           port      = 80
         }
       }
