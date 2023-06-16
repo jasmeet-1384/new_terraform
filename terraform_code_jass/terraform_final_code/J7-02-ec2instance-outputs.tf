@@ -16,27 +16,27 @@ output "ec2_bastion_public_ip" {
 # Private EC2 Instances
 ## ec2_private_instance_ids
 
-output "ec2_private_instance_ids" {
+output "ec2_private_instance_ids_app1" {
   description = "List of IDs of instances"
   #value       = [module.ec2_private.id]
   value = [for ec2private in module.ec2_private_app1: ec2private.id ]   
 }
 
 ## ec2_private_ip
-output "ec2_private_ip" {
+output "ec2_private_ip_app1" {
   description = "List of private IP addresses assigned to the instances"
   #value       = [module.ec2_private.private_ip]
   value = [for ec2private in module.ec2_private_app1: ec2private.private_ip ]  
 }
 
-output "ec2_private_instance_ids" {
+output "ec2_private_instance_ids_app2" {
   description = "List of IDs of instances"
   #value       = [module.ec2_private.id]
   value = [for ec2private in module.ec2_private_app2: ec2private.id ]   
 }
 
 ## ec2_private_ip
-output "ec2_private_ip" {
+output "ec2_private_ip_app2" {
   description = "List of private IP addresses assigned to the instances"
   #value       = [module.ec2_private.private_ip]
   value = [for ec2private in module.ec2_private_app2: ec2private.private_ip ]  
