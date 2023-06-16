@@ -121,7 +121,7 @@ module "alb" {
   https_listener_rules = [
     # Rule-1: /app1*
     {
-      https_listener_index = 1
+      https_listener_index = 0
       
 
       actions = [
@@ -136,7 +136,7 @@ module "alb" {
     },
     # Rule-2: /app2* 
     {
-     https_listener_index = 2
+     https_listener_index = 0
       actions = [
         {
           type               = "forward"
