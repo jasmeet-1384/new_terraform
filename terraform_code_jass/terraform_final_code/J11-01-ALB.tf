@@ -141,7 +141,7 @@ module "alb" {
       actions = [
         {
           type               = "forward"
-         target_group_index = 0
+         target_group_index = 1
         }
       ]
       conditions = [{
