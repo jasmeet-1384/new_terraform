@@ -65,7 +65,7 @@ module "ec2_private_app2" {
   #subnet_id              = module.vpc.public_subnets[0]  
   #subnet_ids = [module.vpc.private_subnets[0],module.vpc.private_subnets[1]] 
   subnet_id =  element(module.vpc.private_subnets, tonumber(each.key)) 
-  count         = var.private_instance_count
+  #count         = var.private_instance_count
   user_data = file("${path.module}/app2-install.sh")
   tags = local.common_tags
 }
