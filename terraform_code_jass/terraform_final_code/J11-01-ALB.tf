@@ -122,7 +122,7 @@ module "alb" {
     # Rule-1: /app1*
     {
       https_listener_index = 0
-      
+      priority             = 1
 
       actions = [
         {
@@ -137,6 +137,7 @@ module "alb" {
     # Rule-2: /app2* 
     {
      https_listener_index = 0
+     priority             = 2
       actions = [
         {
           type               = "forward"
