@@ -4,9 +4,9 @@ sudo yum update -y
 sudo yum install -y httpd
 sudo systemctl enable httpd
 sudo service httpd start  
-sudo echo '<h1>Welcome to mysite App2 - APP-1</h1>' | sudo tee /var/www/html/index.html
-sudo mkdir /var/www/html/app2
-sudo echo '<!DOCTYPE html> <html> <body style="background-color:rgb(250, 210, 210);"> <h1>Welcome to mysite App2- APP-1</h1> <p>Terraform Learning</p> <p>ALB</p> </body></html>' | sudo tee /var/www/html/app1/index.html
+sudo echo '<h1>Welcome to mysite App1 - APP-1</h1>' | sudo tee /var/www/html/index.html
+sudo mkdir /var/www/html/app1
+sudo echo '<!DOCTYPE html> <html> <body style="background-color:rgb(250, 210, 210);"> <h1>Welcome to mysite App1- APP-1</h1> <p>Terraform Learning</p> <p>ALB</p> </body></html>' | sudo tee /var/www/html/app1/index.html
 sudo curl http://169.254.169.254/latest/dynamic/instance-identity/document -o /var/www/html/app1/metadata.html
 
 
