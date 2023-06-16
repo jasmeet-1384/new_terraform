@@ -62,7 +62,7 @@ module "ec2_private_app2" {
   #monitoring             = true
   vpc_security_group_ids = [module.private_sg.security_group_id]
   #subnet_id              = module.vpc.public_subnets[0]  
-  subnet_id = [
+  subnet_ids = [
     module.vpc.private_subnets[0],
     module.vpc.private_subnets[1]
   ]  
