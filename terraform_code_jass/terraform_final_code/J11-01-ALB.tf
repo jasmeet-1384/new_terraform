@@ -121,11 +121,11 @@ module "alb" {
   https_listener_rules = [
     # Rule-1: /app1*
     {
-      #https_listener_index = 0
+      https_listener_index = 0
       actions = [
         {
           type               = "forward"
-          #target_group_index = 0
+          target_group_index = 0
         }
       ]
       conditions = [{
@@ -134,11 +134,11 @@ module "alb" {
     },
     # Rule-2: /app2* 
     {
-     # https_listener_index = 1
+     https_listener_index = 1
       actions = [
         {
           type               = "forward"
-         #target_group_index = 1
+         target_group_index = 1
         }
       ]
       conditions = [{
