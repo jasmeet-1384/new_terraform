@@ -53,7 +53,7 @@ deregistration_delay = 10
       protocol_version = "HTTP1"
       # App1 Target Group - Targets
       targets = {
-        my_app1_jass = {
+        my_app1_jass1 = {
           target_id = module.ec2_private_app1[0].id
           port      = 80
         }
