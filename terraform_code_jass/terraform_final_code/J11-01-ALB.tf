@@ -111,7 +111,7 @@ module "alb" {
       action_type     = "fixed-response"
       fixed_response = {
         content_type = "text/plain"
-        message_body = "Fixed Static message - for Root Context"
+        message_body = "Hello Jasmeet Singh"
         status_code  = "200"
       }
     },
