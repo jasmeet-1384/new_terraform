@@ -20,3 +20,8 @@ vpc_create_database_subnet_group = true
 vpc_create_database_subnet_route_table = true   
 vpc_enable_nat_gateway = true  
 vpc_single_nat_gateway = true
+
+
+# AWS Load Balancer Variables
+app1_dns_name = "apps1.opsmgnt.com"
+app2_dns_name = "apps2.opsmgnt.com"
