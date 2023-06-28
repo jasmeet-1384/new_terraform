@@ -57,10 +57,10 @@ module "alb" {
           target_id = module.ec2_private_app1[0].id
           port      = 80
         }
-        my_app1_jass2 = {
-          target_id = module.ec2_private_app1[1].id
-          port      = 80
-        }
+        # my_app1_jass2 = {
+        #   target_id = module.ec2_private_app1[1].id
+        #   port      = 80
+        # }
       }
       tags = local.common_tags
     },
@@ -92,10 +92,10 @@ module "alb" {
           target_id = module.ec2_private_app2[0].id
           port      = 80
         },
-        my_app2_jass2 = {
-          target_id = module.ec2_private_app2[1].id
-          port      = 80
-        }
+        # my_app2_jass2 = {
+        #   target_id = module.ec2_private_app2[1].id
+        #   port      = 80
+        # }
       }
       tags = local.common_tags
     }
