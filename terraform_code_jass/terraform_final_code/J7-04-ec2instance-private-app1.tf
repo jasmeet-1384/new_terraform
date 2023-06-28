@@ -56,7 +56,7 @@ module "ec2_private_app1" {
   depends_on = [ module.vpc ] # VERY VERY IMPORTANT else userdata webserver provisioning will fail
   source  = "terraform-aws-modules/ec2-instance/aws"
   version = "5.1.0"
-  for_each = toset(["0", "1"])
+  for_each = toset(["0"])
   # insert the 10 required variables here
   name                   = "${var.environment}-app1"
   ami                    = data.aws_ami.amz-linux2.id
