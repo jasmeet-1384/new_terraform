@@ -4,7 +4,7 @@ module "ec2_public" {
   source  = "terraform-aws-modules/ec2-instance/aws"
   version = "5.1.0"
   # insert the 10 required variables here
-  name                   = "${var.environment}-BastionHost"
+  name                   = "${var.environment}-BastionHost1"
   #instance_count         = 5
   ami                    = data.aws_ami.amz-linux2.id
   instance_type          = var.instance_type
