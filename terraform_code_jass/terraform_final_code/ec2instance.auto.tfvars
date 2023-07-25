@@ -25,3 +25,10 @@ vpc_single_nat_gateway = true
 # AWS Load Balancer Variables
 app1_dns_name = "apps1.opsmgnt.com"
 app2_dns_name = "apps2.opsmgnt.com"
+
+
+# RDS Database Variables
+db_name = "webappdb"
+db_instance_identifier = "webappdb"
+db_username = "dbadmin"
+db_password = "dbpassword11"
