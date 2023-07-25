@@ -19,10 +19,10 @@ output "db_instance_ca_cert_identifier" {
   value = module.rdsdb.db_instance_ca_cert_identifier
 }
 
-output "db_instance_cloudwatch_log_groups" {
-  description = "Map of CloudWatch log groups created and their attributes"
-  value = module.rdsdb.db_instance_cloudwatch_log_groups
-}
+# output "db_instance_cloudwatch_log_groups" {
+#   description = "Map of CloudWatch log groups created and their attributes"
+#   value = module.rdsdb.db_instance_cloudwatch_log_groups
+# }
 
 output "db_instance_domain" {
   description = "The ID of the Directory Service Active Directory domain the instance is joined to"
@@ -39,8 +39,8 @@ output "db_instance_endpoint" {
   value = module.rdsdb.db_instance_endpoint
 }
 
-output "db_instance_engine" {
-  description = "The database engine"
-  value = module.rdsdb.db_instance_engine
-}
+# output "db_instance_engine" {
+#   description = "The database engine"
+#   value = module.rdsdb.db_instance_engine
+# }
 
