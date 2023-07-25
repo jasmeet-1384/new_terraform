@@ -44,6 +44,3 @@ output "db_instance_engine" {
   value = module.rdsdb.db_instance_engine
 }
 
-output "name" {
-  
-}
